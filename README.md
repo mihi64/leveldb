@@ -43,11 +43,14 @@ This project supports [CMake](https://cmake.org/) out of the box.
 
 ### Build for POSIX
 
-Quick start:
+Quick start (clone repo, clone submodules, build/compile using 4 threads):
 
 ```bash
+git clone https://github.com/google/leveldb.git myLevelDb
+cd myLevelDb
+git submodule update --init
 mkdir -p build && cd build
-cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build .
+cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build . -j 4
 ```
 
 ### Building for Windows
